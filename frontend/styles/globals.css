@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	/* height: 100%; */
+	@apply bg-gray-50 dark:bg-gray-800 dark:text-indigo-50;
+}
+
+button {
+	@apply dark:shadow-2xl;
+}
+
+ol {
+	@apply list-decimal;
+}
+
+ul {
+	@apply list-disc;
+}
+
+header {
+	animation: fadeInDown 1.5s;
+}
+
+main {
+	animation: fadeInUp 1.5s;
+}
+
+footer {
+	animation: fadeInUp 1.5s;
+}
+
+.fade-in {
+	animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+}
+
+.link {
+	@apply underline text-blue-600 hover:text-blue-800
+	dark:hover:text-blue-300 dark:text-blue-400;
+}
+
+.p-clamp {
+	width: clamp(45ch, 50%, 75ch);
+}
+
+.nav-item {
+	@apply text-green-main hover:text-green-800 px-2 list-none
+	font-medium text-lg dark:text-green-bp2 dark:hover:text-yellow-400;
+}
+
+.active-nav {
+	@apply border-b-2 border-green-300 text-green-main list-none
+	hover:text-green-800 hover:border-green-800 px-2
+	font-medium text-lg dark:text-yellow-400 dark:hover:text-yellow-500
+	dark:border-yellow-400 dark:hover:border-yellow-500;
+}
+
+.main-heading {
+	@apply text-3xl text-center font-bold mt-9;
+}
+
+.h3-heading {
+	@apply text-xl text-center font-bold;
+}
+
+.input-field {
+	@apply shadow border rounded-3xl py-2 px-4
+	text-gray-700 focus:outline-none focus:border-green-500
+	dark:bg-gray-700 dark:text-gray-100 dark:border-gray-500 dark:shadow-2xl
+	dark:focus:border-green-500 dark:focus:ring-2 focus:border-transparent;
+}
+
+.disabled-input {
+	@apply shadow border rounded-3xl py-2 px-4 cursor-not-allowed
+	text-gray-500 focus:outline-none focus:border-green-500
+	dark:bg-gray-800 dark:border-gray-600 dark:shadow-2xl
+	dark:focus:border-green-500 dark:focus:ring-2 focus:border-transparent;
+}
+
+.input-label {
+	@apply px-1 pt-6 pb-1 font-medium text-lg;
+}
+
+.action-card {
+	@apply flex flex-col p-5 border w-min bg-slate-50
+	rounded-3xl shadow dark:shadow-2xl dark:bg-gray-800;
+}
+
+.dex-borders {
+	@apply flex flex-col border bg-slate-50 max-w-xl
+	rounded-b-5xl shadow dark:shadow-2xl dark:bg-gray-800
+	dark:border-gray-600;
+}
+
+.prediction-form {
+	@apply flex flex-col p-7 border w-max bg-slate-50
+	rounded-3xl shadow dark:shadow-2xl dark:bg-gray-800;
+}
+
+.repeated-attendance {
+	@apply flex flex-col p-5 border w-max bg-slate-50
+	rounded-3xl shadow dark:shadow-2xl dark:bg-gray-800;
+}
+
+.game-card {
+	@apply flex flex-col p-5 my-2 border
+	rounded-3xl shadow dark:shadow-2xl;
+}
+
+.nft-card {
+	@apply m-10 max-w-xs rounded-3xl overflow-hidden
+	shadow-xl dark:shadow-2xl dark:bg-gray-700
+	bg-gray-100;
+}
+
+/* Buttons */
+
+.green-btn {
+	@apply text-white font-bold py-2 px-5
+	rounded-3xl bg-green-main hover:bg-green-bp3
+	shadow dark:shadow-2xl;
+}
+
+.metamask-btn {
+	@apply text-white font-bold py-2 px-6
+	rounded-3xl bg-green-main hover:bg-green-bp3
+	shadow dark:shadow-2xl;
+}
+
+.blue-btn {
+	@apply bg-blue-500 hover:bg-blue-600 text-white
+	font-bold py-2 px-5 rounded-3xl shadow dark:shadow-2xl;
+}
+
+.disabled-btn {
+	@apply bg-gray-500 text-white font-bold py-2 px-4
+	rounded-3xl opacity-50 cursor-not-allowed shadow dark:shadow-2xl;
+}
+
+.disabled-green-btn {
+	@apply bg-green-main text-white font-bold py-2 px-4
+	rounded-3xl opacity-50 cursor-not-allowed shadow dark:shadow-2xl;
+}
+
+.btn-group {
+	@apply border-gray-200 bg-white text-sm font-medium px-10 py-3
+text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10
+	focus:ring-2 focus:ring-yellow-200 w-max dark:hover:bg-gray-700
+	dark:bg-zinc-900 dark:text-slate-100 dark:border-gray-600;
+}
+
+.selected-btn-group {
+	@apply border-gray-200 bg-slate-400 text-sm font-medium px-10 py-3
+	hover:bg-green-500 hover:text-white focus:z-10
+	focus:ring-2 focus:ring-yellow-200 w-max bg-green-bp1 text-white
+	dark:bg-green-700 dark:border-gray-600 dark:text-slate-100
+	dark:hover:bg-green-600;
+}
